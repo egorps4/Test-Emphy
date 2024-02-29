@@ -13,6 +13,6 @@ const formateDeals = (deals) => {
             responsible_user_id: deal.responsible_user_id,
         };
     });
-};
+}
 
 export default formateDeals;

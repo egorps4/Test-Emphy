@@ -1,4 +1,6 @@
 const sortDeals = (deals, sortBy, order) => {
+    if (deals.length === 0) return;
+
     return deals.sort((a, b) => {
         let comparison = 0;
         if (sortBy === 'dealName') {

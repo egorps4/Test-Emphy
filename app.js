@@ -41,7 +41,7 @@ document.addEventListener("DOMContentLoaded", async () => {
     } catch (error) {
       console.error('Ошибка при обновлении таблицы:', error);
     }
-  });
+  })
 
   document.querySelector('.pagination').addEventListener('click', async (event) => {
     event.preventDefault();
@@ -55,7 +55,7 @@ document.addEventListener("DOMContentLoaded", async () => {
       } catch (error) {
         console.error('Ошибка при обновлении таблицы:', error);
       }
-    };
+    }
 
     if (target.classList.contains('prev-page')) {
       queries.page--;
@@ -65,12 +65,12 @@ document.addEventListener("DOMContentLoaded", async () => {
       } catch (error) {
         console.error('Ошибка при обновлении таблицы:', error);
       }
-    };
-  });
+    }
+  })
 
   document.getElementById('tableHead').addEventListener('click', (event) => {
-    console.log(queries)
     const target = event.target;
+
     if (target.id === "dealName" || target.id === "dealPrice") {
       document.querySelectorAll('.sortField').forEach(element => {
         if (element !== target) {
@@ -83,9 +83,9 @@ document.addEventListener("DOMContentLoaded", async () => {
       fillDealsTable(sortedDeals);
 
       sortState[target.id] = sortState[target.id] === 'asc' ? 'desc' : 'asc';
+
       target.classList.toggle('rotate', sortState[target.id] === 'desc');
       target.classList.add('active');
     }
-  });
-
-});
+  })
+})
