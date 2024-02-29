@@ -23,3 +23,5 @@ const pagination = (page, isLastPage) => {
     nextPageElement.innerHTML = `<a class="page-link next-page" href="#">Следующая страница</a>`;
     paginationElement.appendChild(nextPageElement);
 }
+
+export default pagination;
